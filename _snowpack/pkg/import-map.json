@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "@deck.gl/core": "./@deck.gl/core.js",
+    "@deck.gl/geo-layers": "./@deck.gl/geo-layers.js",
+    "@deck.gl/layers": "./@deck.gl/layers.js",
+    "@loaders.gl/core": "./@loaders.gl/core.js",
+    "@loaders.gl/images": "./@loaders.gl/images.js",
+    "@luma.gl/constants": "./@luma.gl/constants.js",
+    "deck.gl": "./deck.gl.js",
+    "react": "./react.js",
+    "react-colorful": "./react-colorful.js",
+    "react-dom": "./react-dom.js"
+  }
+}
