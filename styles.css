@@ -1,0 +1,44 @@
+.channel-list .react-colorful {
+  height: 14px;
+}
+
+.channel-list .react-colorful__saturation,
+.channel-list .react-colorful__alpha {
+  display:none;
+  height: 0;
+  width: 0;
+}
+
+.channel-list .react-colorful__hue {
+  height: 14px;
+  border-radius: 2px;
+}
+
+.channel-list .react-colorful__hue-pointer {
+  width: 20px;
+  height: 20px;
+}
+
+.channel-list {
+  display: grid;
+  grid-auto-rows: 20px;
+  grid-template-columns: 75px min-content;
+  column-gap: 10px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: min-content;
+  padding: 0.5em;
+}
+
+.channel-label {
+  font-family: sans-serif;
+  color: #cccccc;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.channel-label.enabled {
+  color: #ffffff;
+  font-weight: bold;
+}
