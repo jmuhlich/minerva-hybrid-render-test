@@ -59,11 +59,11 @@ function ChannelControl(props) {
 }
 
 const imageSource = {
-  width: 3500,
-  height: 2500,
+  width: 78417,
+  height: 57360,
   tileSize: 1024,
-  maxLevel: 2,
-  path: 'data/tonsil',
+  maxLevel: 7,
+  path: 'https://jmuhlich-test.s3.amazonaws.com/P37_S29-CRC01/images/P37_S29-CRC01',
 };
 
 function channelLayer(subpath, color, visible) {
@@ -112,20 +112,19 @@ function App() {
     <>
       <Deck
         layers={[
-          channelLayer('DNA_0__DNA', hsv2gl(color1), visible[0]),
-          channelLayer('Ki-67_1__Ki-67', hsv2gl(color2), visible[1]),
-          channelLayer('Keratin_2__Keratin', hsv2gl(color3), visible[2]),
-          channelLayer('CD3D_3__CD3D', hsv2gl(color4), visible[3]),
-          channelLayer('CD4_4__CD4', hsv2gl(color5), visible[4]),
-          channelLayer('CD45_5__CD45', hsv2gl(color6), visible[5]),
-          channelLayer('CD8A_6__CD8A', hsv2gl(color7), visible[6]),
-          channelLayer('-SMA_7__-SMA', hsv2gl(color8), visible[7]),
-          channelLayer('CD20_8__CD20', hsv2gl(color9), visible[8]),
+          channelLayer('Hoechst_0__Hoechst', hsv2gl(color1), visible[0]),
+          channelLayer('CD31_2__CD31', hsv2gl(color2), visible[1]),
+          channelLayer('CD45_3__CD45', hsv2gl(color3), visible[2]),
+          channelLayer('CD68_4__CD68', hsv2gl(color4), visible[3]),
+          channelLayer('CD4_6__CD4', hsv2gl(color5), visible[4]),
+          channelLayer('FOXP3_7__FOXP3', hsv2gl(color6), visible[5]),
+          channelLayer('CD8a_8__CD8a', hsv2gl(color7), visible[6]),
+          channelLayer('CD45RO_9__CD45RO', hsv2gl(color8), visible[7]),
+          channelLayer('CD20_10__CD20', hsv2gl(color9), visible[8]),
         ]}
-        views={[new OrthographicView({ id: 'ortho', controller: true })]}
+        views={[new OrthographicView({ id: 'ortho', controller: {inertia: true} })]}
         viewState={viewState}
         onViewStateChange={e => setViewState(e.viewState)}
-        controller={true}
       />
       <div className='channel-list'>
         <ChannelControl name='DNA' color={color1} setColor={setColor1} visible={visible[0]} toggleVisible={toggleVisibleI(0)} />
